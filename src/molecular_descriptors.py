@@ -1,0 +1,56 @@
+import pandas as pd
+from rdkit.Chem import Descriptors, MolToSmiles
+import seaborn as sns 
+import matplotlib.pyplot as plt
+
+def adding_descriptors(mols):
+    molecular_descriptors = []
+    for mol in mols:
+        molecular_descriptors.append({
+            'Molecular_Weight': Descriptors.MolWt(mol),
+            'H-Bond_Donor_Count': Descriptors.NumHDonors(mol),
+            'H-Bond_Acceptor_Count': Descriptors.NumHAcceptors(mol),
+            'Rotatable_Bond_Count': Descriptors.NumRotatableBonds(mol),
+            'Polar_Area': Descriptors.TPSA(mol),
+            'XLogP': Descriptors.MolLogP(mol),
+        })
+    
+    df_molecular_descriptors = pd.DataFrame(molecular_descriptors)
+    print("Descriptors summary:")
+    print(df_molecular_descriptors.describe())
+    print("First molecule descriptors:")
+    print(df_molecular_descriptors.iloc[0])
+    return df_molecular_descriptors
+
+def distribution(df_molecular_descriptors):
+    sns.histplot(df_molecular_descriptors['Molecular_Weight'])
+    plt.title("Distribution of molecular weight")
+    plt.show()
+    sns.histplot(df_molecular_descriptors['Polar_Area'])
+    plt.title("Distribution of tpsa")
+    plt.show()
+    sns.histplot(df_molecular_descriptors['XLogP'])
+    plt.title("Distribution of XLogP")
+    plt.show()
+    sns.scatterplot(x='Polar_Area', y='XLogP', data=df_molecular_descriptors)
+    plt.title("Polar Area vs XLogP")
+    plt.show()
+
+def lipinski_rule(mol):
+    if mol is None:
+        return False
+
+    conditions = [
+        Descriptors.MolWt(mol) <= 500,
+        Descriptors.MolLogP(mol) <= 5,
+        Descriptors.NumHDonors(mol) <= 5,
+        Descriptors.NumHAcceptors(mol) <= 10,
+        Descriptors.NumRotatableBonds(mol) <= 10,
+        Descriptors.TPSA(mol) <= 140
+    ]
+    for condition in conditions:
+        if not condition:
+            return False
+    print(f'The following compound: "{MolToSmiles(mol)}" passes Lipinski\'s rule')
+    return True
+

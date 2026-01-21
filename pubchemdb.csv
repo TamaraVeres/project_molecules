@@ -1,0 +1,11 @@
+Compound_CID,Name,smiles,H-Bond_Donor_Count,H-Bond_Acceptor_Count,Molecular_Weight,Molecular_Formula,Polar_Area,Rotatable_Bond_Count,XLogP
+498033,2-Ethylhexyl sulfate(1-),CCCCC(CC)COS(=O)(=O)[O-],0,4,209.29,C8H17O4S-,74.8,6,2.6
+2335,Benzethonium,CC(C)(C)CC(C)(C)C1=CC=C(C=C1)OCCOCC[N+](C)(C)CC2=CC=CC=C2,0,2,412.6,C27H42NO2+,18.5,12,6.7
+16043,Tert-Butylhydroquinone,CC(C)(C)C1=C(C=CC(=C1)O)O,2,2,166.22,C10H14O2,40.5,1,2.8
+4713005,"3,5-Dimethylbenzenesulfonate",CC1=CC(=CC(=C1)S(=O)(=O)[O-])C,0,3,185.22,C8H9O3S-,65.6,0,1.4
+6781,Diethyl Phthalate,CCOC(=O)C1=CC=CC=C1C(=O)OCC,0,4,222.24,C12H14O4,52.6,6,2.5
+7850,Allyl chloride,C=CCCl,0,0,76.52,C3H5Cl,0.0,1,1.5
+44073,Acifluorfen,C1=CC(=C(C=C1C(F)(F)F)Cl)OC2=CC(=C(C=C2)[N+](=O)[O-])C(=O)O,1,8,361.65,C14H7ClF3NO5,92.4,3,3.0
+119435,Dichlorprop-P,C[C@H](C(=O)O)OC1=C(C=C(C=C1)Cl)Cl,1,3,235.06,C9H8Cl2O3,46.5,3,3.4
+23327,D-Glutamic Acid,C(CC(=O)O)[C@H](C(=O)O)N,3,5,147.13,C5H9NO4,101.0,4,-3.7
+88735,1-O-alpha-D-Glucopyranosyl-D-mannitol,C([C@@H]1[C@H]([C@@H]([C@H]([C@H](O1)OC[C@H]([C@H]([C@@H]([C@@H](CO)O)O)O)O)O)O)O)O,9,11,344.31,C12H24O11,201.0,8,-5.2
