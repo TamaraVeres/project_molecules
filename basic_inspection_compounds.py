@@ -15,9 +15,10 @@ def basic_inspection(df_compounds):
     return df_compounds
 
 
-def cleaning_molecules(df_compounds):
+def clean_molecules(df_compounds):
     mols = []
     unique_smiles = set()
+    invalid_smiles = []
 
     for smile in df_compounds["smiles"]:
         mol = Chem.MolFromSmiles(smile)
@@ -27,10 +28,17 @@ def cleaning_molecules(df_compounds):
             if canonical_smile not in unique_smiles:
                 unique_smiles.add(canonical_smile)
                 mols.append(mol)
+            else:
+                invalid_smiles.append(smile)
     print("Number of initial molecules:", len(df_compounds["smiles"]))
     print("Number of unique valid molecules:", len(mols))
     print("Number of unique canonical smiles:", len(unique_smiles))
+    if invalid_smiles:
+        print("Invalid smiles:")
+        for i, smile in enumerate(invalid_smiles, 1):
+            print(f"{i}. {smile}")
     return mols
+    
 
 def draw_molecule(mol):
     Draw.MolToFile(mol, "molecule.png")
