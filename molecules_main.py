@@ -15,8 +15,8 @@ def molecules_main():
     draw_molecule(mols[5])
     comparison_table = compare_descriptors(df_molecular_descriptors, df_compounds)
     print(comparison_table.head(10))
-    comparison_table.to_csv("comparison_results.csv", index=False)
-    comparison_table.to_html("comparison_results.html", index=False)
+    comparison_table.to_csv("./results/comparison_results.csv", index=False)
+    comparison_table.to_html("./results/comparison_results.html", index=False)
 
 
 if __name__ == "__main__":
