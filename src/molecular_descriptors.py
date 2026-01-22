@@ -3,7 +3,7 @@ from rdkit.Chem import Descriptors, MolToSmiles
 import seaborn as sns 
 import matplotlib.pyplot as plt
 
-def adding_descriptors(mols):
+def calculate_rdkit_descriptors(mols):
     molecular_descriptors = []
     for mol in mols:
         molecular_descriptors.append({

@@ -2,6 +2,7 @@ import pandas as pd
 from rdkit import Chem 
 from rdkit.Chem.MolStandardize import rdMolStandardize
 from rdkit.Chem import Draw 
+from mordred import Calculator, descriptors
 
 
 def load_csv(file_path):
@@ -23,7 +24,7 @@ def clean_molecules(df_compounds):
     for smile in df_compounds["smiles"]:
         mol = Chem.MolFromSmiles(smile)
         if mol is not None:
-            mol = rdMolStandardize.Cleanup(mol)
+            # mol = rdMolStandardize.Cleanup(mol)
             canonical_smile = Chem.MolToSmiles(mol)
             if canonical_smile not in unique_smiles:
                 unique_smiles.add(canonical_smile)
