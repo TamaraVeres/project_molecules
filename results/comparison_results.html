@@ -4,135 +4,468 @@
       <th>smiles</th>
       <th>molecular_weight_experimental</th>
       <th>molecular_weight_rdkit</th>
+      <th>molecular_weight_mordred</th>
       <th>molecular_weight_error</th>
       <th>tpsa_experimental</th>
       <th>tpsa_rdkit</th>
+      <th>tpsa_mordred</th>
       <th>tpsa_error</th>
       <th>logp_experimental</th>
       <th>logp_rdkit</th>
+      <th>logp_mordred</th>
       <th>logp_error</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>CCCCC(CC)COS(=O)(=O)[O-]</td>
-      <td>209.29</td>
-      <td>209.287</td>
-      <td>3.000000e-03</td>
-      <td>74.8</td>
-      <td>66.43</td>
-      <td>8.370000e+00</td>
-      <td>2.6</td>
-      <td>1.67960</td>
-      <td>0.92040</td>
+      <td>C[N+](C)(C)CCO</td>
+      <td>104.17</td>
+      <td>104.173</td>
+      <td>104.106990</td>
+      <td>-3.000000e-03</td>
+      <td>20.2</td>
+      <td>20.23</td>
+      <td>20.23</td>
+      <td>-3.000000e-02</td>
+      <td>-0.4</td>
+      <td>-0.31510</td>
+      <td>-0.31510</td>
+      <td>-0.08490</td>
     </tr>
     <tr>
       <td>CC(C)(C)CC(C)(C)C1=CC=C(C=C1)OCCOCC[N+](C)(C)CC2=CC=CC=C2</td>
       <td>412.60</td>
       <td>412.638</td>
+      <td>412.321006</td>
       <td>-3.800000e-02</td>
       <td>18.5</td>
+      <td>18.46</td>
       <td>18.46</td>
       <td>4.000000e-02</td>
       <td>6.7</td>
       <td>6.07240</td>
+      <td>6.07240</td>
       <td>0.62760</td>
     </tr>
     <tr>
-      <td>CC(C)(C)C1=C(C=CC(=C1)O)O</td>
-      <td>166.22</td>
-      <td>166.220</td>
-      <td>0.000000e+00</td>
-      <td>40.5</td>
-      <td>40.46</td>
+      <td>CCOC1=CC2=C(C=C1)NC(C=C2C)(C)C</td>
+      <td>217.31</td>
+      <td>217.312</td>
+      <td>217.146664</td>
+      <td>-2.000000e-03</td>
+      <td>21.3</td>
+      <td>21.26</td>
+      <td>21.26</td>
       <td>4.000000e-02</td>
-      <td>2.8</td>
-      <td>2.39530</td>
-      <td>0.40470</td>
+      <td>3.1</td>
+      <td>3.69270</td>
+      <td>3.69270</td>
+      <td>-0.59270</td>
     </tr>
     <tr>
-      <td>CC1=CC(=CC(=C1)S(=O)(=O)[O-])C</td>
-      <td>185.22</td>
-      <td>185.224</td>
-      <td>-4.000000e-03</td>
-      <td>65.6</td>
-      <td>57.20</td>
-      <td>8.400000e+00</td>
-      <td>1.4</td>
-      <td>1.20754</td>
-      <td>0.19246</td>
+      <td>C1=C(C(=O)NC(=O)N1)F</td>
+      <td>130.08</td>
+      <td>130.078</td>
+      <td>130.017856</td>
+      <td>2.000000e-03</td>
+      <td>58.2</td>
+      <td>65.72</td>
+      <td>65.72</td>
+      <td>-7.520000e+00</td>
+      <td>-0.9</td>
+      <td>-0.79770</td>
+      <td>-0.79770</td>
+      <td>-0.10230</td>
+    </tr>
+    <tr>
+      <td>C(CC=O)CC=O</td>
+      <td>100.12</td>
+      <td>100.117</td>
+      <td>100.052429</td>
+      <td>3.000000e-03</td>
+      <td>34.1</td>
+      <td>34.14</td>
+      <td>34.14</td>
+      <td>-4.000000e-02</td>
+      <td>-0.5</td>
+      <td>0.55450</td>
+      <td>0.55450</td>
+      <td>-1.05450</td>
+    </tr>
+    <tr>
+      <td>C1NC2=CC(=C(C=C2S(=O)(=O)N1)S(=O)(=O)N)Cl</td>
+      <td>297.70</td>
+      <td>297.745</td>
+      <td>296.964475</td>
+      <td>-4.500000e-02</td>
+      <td>135.0</td>
+      <td>118.36</td>
+      <td>135.12</td>
+      <td>1.664000e+01</td>
+      <td>-0.1</td>
+      <td>-0.35130</td>
+      <td>-0.35130</td>
+      <td>0.25130</td>
+    </tr>
+    <tr>
+      <td>CN1C2=C(C=C(C=C2)Cl)C(=NC(C1=O)O)C3=CC=CC=C3</td>
+      <td>300.74</td>
+      <td>300.745</td>
+      <td>300.066555</td>
+      <td>-5.000000e-03</td>
+      <td>52.9</td>
+      <td>52.90</td>
+      <td>52.90</td>
+      <td>-7.105427e-15</td>
+      <td>2.2</td>
+      <td>2.47220</td>
+      <td>2.47220</td>
+      <td>-0.27220</td>
+    </tr>
+    <tr>
+      <td>C=CC(=O)O</td>
+      <td>72.06</td>
+      <td>72.063</td>
+      <td>72.021129</td>
+      <td>-3.000000e-03</td>
+      <td>37.3</td>
+      <td>37.30</td>
+      <td>37.30</td>
+      <td>0.000000e+00</td>
+      <td>0.3</td>
+      <td>0.25700</td>
+      <td>0.25700</td>
+      <td>0.04300</td>
     </tr>
     <tr>
       <td>CCOC(=O)C1=CC=CC=C1C(=O)OCC</td>
       <td>222.24</td>
       <td>222.240</td>
+      <td>222.089209</td>
       <td>5.684342e-14</td>
       <td>52.6</td>
+      <td>52.60</td>
       <td>52.60</td>
       <td>-7.105427e-15</td>
       <td>2.5</td>
       <td>2.04000</td>
+      <td>2.04000</td>
       <td>0.46000</td>
+    </tr>
+    <tr>
+      <td>C1=CC=C(C(=C1)NC2=NC(=NC(=N2)Cl)Cl)Cl</td>
+      <td>275.50</td>
+      <td>275.526</td>
+      <td>273.957979</td>
+      <td>-2.600000e-02</td>
+      <td>50.7</td>
+      <td>50.70</td>
+      <td>50.70</td>
+      <td>0.000000e+00</td>
+      <td>3.0</td>
+      <td>3.57540</td>
+      <td>3.57540</td>
+      <td>-0.57540</td>
+    </tr>
+    <tr>
+      <td>C1N2CN(CN1CN(C2)N=O)N=O</td>
+      <td>186.17</td>
+      <td>186.175</td>
+      <td>186.086524</td>
+      <td>-5.000000e-03</td>
+      <td>71.8</td>
+      <td>71.82</td>
+      <td>71.82</td>
+      <td>-2.000000e-02</td>
+      <td>0.3</td>
+      <td>-0.62810</td>
+      <td>-0.62810</td>
+      <td>0.92810</td>
     </tr>
     <tr>
       <td>C=CCCl</td>
       <td>76.52</td>
       <td>76.526</td>
+      <td>76.007978</td>
       <td>-6.000000e-03</td>
       <td>0.0</td>
+      <td>0.00</td>
       <td>0.00</td>
       <td>0.000000e+00</td>
       <td>1.5</td>
       <td>1.41120</td>
+      <td>1.41120</td>
       <td>0.08880</td>
     </tr>
     <tr>
-      <td>C1=CC(=C(C=C1C(F)(F)F)Cl)OC2=CC(=C(C=C2)[N+](=O)[O-])C(=O)O</td>
-      <td>361.65</td>
-      <td>361.659</td>
-      <td>-9.000000e-03</td>
-      <td>92.4</td>
-      <td>89.67</td>
-      <td>2.730000e+00</td>
-      <td>3.0</td>
-      <td>4.75750</td>
-      <td>-1.75750</td>
+      <td>CCCCCCCCCCCC[N+](C)(C)[O-]</td>
+      <td>229.40</td>
+      <td>229.408</td>
+      <td>229.240565</td>
+      <td>-8.000000e-03</td>
+      <td>18.1</td>
+      <td>23.06</td>
+      <td>23.06</td>
+      <td>-4.960000e+00</td>
+      <td>5.3</td>
+      <td>4.48150</td>
+      <td>4.48150</td>
+      <td>0.81850</td>
     </tr>
     <tr>
-      <td>C[C@H](C(=O)O)OC1=C(C=C(C=C1)Cl)Cl</td>
-      <td>235.06</td>
-      <td>235.066</td>
-      <td>-6.000000e-03</td>
-      <td>46.5</td>
-      <td>46.53</td>
-      <td>-3.000000e-02</td>
-      <td>3.4</td>
-      <td>2.84530</td>
-      <td>0.55470</td>
+      <td>CC(C)(C)C1=C(C=CC(=C1)O)O</td>
+      <td>166.22</td>
+      <td>166.220</td>
+      <td>166.099380</td>
+      <td>0.000000e+00</td>
+      <td>40.5</td>
+      <td>40.46</td>
+      <td>40.46</td>
+      <td>4.000000e-02</td>
+      <td>2.8</td>
+      <td>2.39530</td>
+      <td>2.39530</td>
+      <td>0.40470</td>
     </tr>
     <tr>
       <td>C(CC(=O)O)[C@H](C(=O)O)N</td>
       <td>147.13</td>
       <td>147.130</td>
+      <td>147.053158</td>
       <td>0.000000e+00</td>
       <td>101.0</td>
+      <td>100.62</td>
       <td>100.62</td>
       <td>3.800000e-01</td>
       <td>-3.7</td>
       <td>-0.73690</td>
+      <td>-0.73690</td>
       <td>-2.96310</td>
+    </tr>
+    <tr>
+      <td>C1=CC=NC(=C1)CCl</td>
+      <td>127.57</td>
+      <td>127.574</td>
+      <td>127.018877</td>
+      <td>-4.000000e-03</td>
+      <td>12.9</td>
+      <td>12.89</td>
+      <td>12.89</td>
+      <td>1.000000e-02</td>
+      <td>1.3</td>
+      <td>1.82040</td>
+      <td>1.82040</td>
+      <td>-0.52040</td>
+    </tr>
+    <tr>
+      <td>C(C(=O)O)C(CC(=O)[O-])(C(=O)[O-])O</td>
+      <td>190.11</td>
+      <td>190.107</td>
+      <td>190.012450</td>
+      <td>3.000000e-03</td>
+      <td>138.0</td>
+      <td>137.79</td>
+      <td>137.79</td>
+      <td>2.100000e-01</td>
+      <td>-0.4</td>
+      <td>-3.91790</td>
+      <td>-3.91790</td>
+      <td>3.51790</td>
+    </tr>
+    <tr>
+      <td>CC(=O)NC1=CC=CC2=C1C3=CC=CC=C3C2</td>
+      <td>223.27</td>
+      <td>223.275</td>
+      <td>223.099714</td>
+      <td>-5.000000e-03</td>
+      <td>29.1</td>
+      <td>29.10</td>
+      <td>29.10</td>
+      <td>0.000000e+00</td>
+      <td>2.7</td>
+      <td>3.21620</td>
+      <td>3.21620</td>
+      <td>-0.51620</td>
+    </tr>
+    <tr>
+      <td>C1=CC(=C(C=C1C(F)(F)F)Cl)OC2=CC(=C(C=C2)[N+](=O)[O-])C(=O)O</td>
+      <td>361.65</td>
+      <td>361.659</td>
+      <td>360.996485</td>
+      <td>-9.000000e-03</td>
+      <td>92.4</td>
+      <td>89.67</td>
+      <td>89.67</td>
+      <td>2.730000e+00</td>
+      <td>3.0</td>
+      <td>4.75750</td>
+      <td>4.75750</td>
+      <td>-1.75750</td>
+    </tr>
+    <tr>
+      <td>CCOC(C=C)OCC</td>
+      <td>130.18</td>
+      <td>130.187</td>
+      <td>130.099380</td>
+      <td>-7.000000e-03</td>
+      <td>18.5</td>
+      <td>18.46</td>
+      <td>18.46</td>
+      <td>4.000000e-02</td>
+      <td>1.4</td>
+      <td>1.57150</td>
+      <td>1.57150</td>
+      <td>-0.17150</td>
+    </tr>
+    <tr>
+      <td>CC(C)(C(=O)O)OCC1=CC=C(C=C1)C2=CC=C(C=C2)Cl</td>
+      <td>304.80</td>
+      <td>304.773</td>
+      <td>304.086622</td>
+      <td>2.700000e-02</td>
+      <td>46.5</td>
+      <td>46.53</td>
+      <td>46.53</td>
+      <td>-3.000000e-02</td>
+      <td>4.0</td>
+      <td>4.38680</td>
+      <td>4.38680</td>
+      <td>-0.38680</td>
     </tr>
     <tr>
       <td>C([C@@H]1[C@H]([C@@H]([C@H]([C@H](O1)OC[C@H]([C@H]([C@@H]([C@@H](CO)O)O)O)O)O)O)O)O</td>
       <td>344.31</td>
       <td>344.313</td>
+      <td>344.131862</td>
       <td>-3.000000e-03</td>
       <td>201.0</td>
+      <td>200.53</td>
       <td>200.53</td>
       <td>4.700000e-01</td>
       <td>-5.2</td>
       <td>-5.76120</td>
+      <td>-5.76120</td>
       <td>0.56120</td>
+    </tr>
+    <tr>
+      <td>C[C@H](C(=O)O)OC1=C(C=C(C=C1)Cl)Cl</td>
+      <td>235.06</td>
+      <td>235.066</td>
+      <td>233.985049</td>
+      <td>-6.000000e-03</td>
+      <td>46.5</td>
+      <td>46.53</td>
+      <td>46.53</td>
+      <td>-3.000000e-02</td>
+      <td>3.4</td>
+      <td>2.84530</td>
+      <td>2.84530</td>
+      <td>0.55470</td>
+    </tr>
+    <tr>
+      <td>CCCCC(CC)COS(=O)(=O)[O-]</td>
+      <td>209.29</td>
+      <td>209.287</td>
+      <td>209.085304</td>
+      <td>3.000000e-03</td>
+      <td>74.8</td>
+      <td>66.43</td>
+      <td>74.81</td>
+      <td>8.370000e+00</td>
+      <td>2.6</td>
+      <td>1.67960</td>
+      <td>1.67960</td>
+      <td>0.92040</td>
+    </tr>
+    <tr>
+      <td>CC1=CC(=CC(=C1)S(=O)(=O)[O-])C</td>
+      <td>185.22</td>
+      <td>185.224</td>
+      <td>185.027789</td>
+      <td>-4.000000e-03</td>
+      <td>65.6</td>
+      <td>57.20</td>
+      <td>65.58</td>
+      <td>8.400000e+00</td>
+      <td>1.4</td>
+      <td>1.20754</td>
+      <td>1.20754</td>
+      <td>0.19246</td>
+    </tr>
+    <tr>
+      <td>C1=C2C3=C(C(=C1O)O)OC(=O)C4=CC(=C(C(=C43)OC2=O)O)O</td>
+      <td>302.19</td>
+      <td>302.194</td>
+      <td>302.006267</td>
+      <td>-4.000000e-03</td>
+      <td>134.0</td>
+      <td>141.34</td>
+      <td>141.34</td>
+      <td>-7.340000e+00</td>
+      <td>1.1</td>
+      <td>1.31280</td>
+      <td>1.31280</td>
+      <td>-0.21280</td>
+    </tr>
+    <tr>
+      <td>CCC(O)OC(CC)O</td>
+      <td>134.17</td>
+      <td>134.175</td>
+      <td>134.094294</td>
+      <td>-5.000000e-03</td>
+      <td>49.7</td>
+      <td>49.69</td>
+      <td>49.69</td>
+      <td>1.000000e-02</td>
+      <td>0.8</td>
+      <td>0.45980</td>
+      <td>0.45980</td>
+      <td>0.34020</td>
+    </tr>
+    <tr>
+      <td>C(C(C1C(=C(C(=O)O1)[O-])O)O)O</td>
+      <td>175.12</td>
+      <td>175.116</td>
+      <td>175.024812</td>
+      <td>4.000000e-03</td>
+      <td>110.0</td>
+      <td>110.05</td>
+      <td>110.05</td>
+      <td>-5.000000e-02</td>
+      <td>-1.0</td>
+      <td>-2.60510</td>
+      <td>-2.60510</td>
+      <td>1.60510</td>
+    </tr>
+    <tr>
+      <td>C([C@H]([C@@H]1C(=C(C(=O)O1)O)O)O)[O-]</td>
+      <td>175.12</td>
+      <td>175.116</td>
+      <td>175.024812</td>
+      <td>4.000000e-03</td>
+      <td>110.0</td>
+      <td>110.05</td>
+      <td>110.05</td>
+      <td>-5.000000e-02</td>
+      <td>-0.5</td>
+      <td>-2.03940</td>
+      <td>-2.03940</td>
+      <td>1.53940</td>
+    </tr>
+    <tr>
+      <td>CCCCCCCCCCC(C)C1=CC=C(C=C1)S(=O)(=O)[O-]</td>
+      <td>325.50</td>
+      <td>325.494</td>
+      <td>325.184289</td>
+      <td>6.000000e-03</td>
+      <td>65.6</td>
+      <td>57.20</td>
+      <td>65.58</td>
+      <td>8.400000e+00</td>
+      <td>6.6</td>
+      <td>5.22500</td>
+      <td>5.22500</td>
+      <td>1.37500</td>
     </tr>
   </tbody>
 </table>

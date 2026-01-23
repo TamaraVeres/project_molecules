@@ -1,11 +1,31 @@
-Compound_CID,Name,smiles,H-Bond_Donor_Count,H-Bond_Acceptor_Count,Molecular_Weight,Molecular_Formula,Polar_Area,Rotatable_Bond_Count,XLogP
-498033,2-Ethylhexyl sulfate(1-),CCCCC(CC)COS(=O)(=O)[O-],0,4,209.29,C8H17O4S-,74.8,6,2.6
-2335,Benzethonium,CC(C)(C)CC(C)(C)C1=CC=C(C=C1)OCCOCC[N+](C)(C)CC2=CC=CC=C2,0,2,412.6,C27H42NO2+,18.5,12,6.7
-16043,Tert-Butylhydroquinone,CC(C)(C)C1=C(C=CC(=C1)O)O,2,2,166.22,C10H14O2,40.5,1,2.8
-4713005,"3,5-Dimethylbenzenesulfonate",CC1=CC(=CC(=C1)S(=O)(=O)[O-])C,0,3,185.22,C8H9O3S-,65.6,0,1.4
-6781,Diethyl Phthalate,CCOC(=O)C1=CC=CC=C1C(=O)OCC,0,4,222.24,C12H14O4,52.6,6,2.5
-7850,Allyl chloride,C=CCCl,0,0,76.52,C3H5Cl,0.0,1,1.5
-44073,Acifluorfen,C1=CC(=C(C=C1C(F)(F)F)Cl)OC2=CC(=C(C=C2)[N+](=O)[O-])C(=O)O,1,8,361.65,C14H7ClF3NO5,92.4,3,3.0
-119435,Dichlorprop-P,C[C@H](C(=O)O)OC1=C(C=C(C=C1)Cl)Cl,1,3,235.06,C9H8Cl2O3,46.5,3,3.4
-23327,D-Glutamic Acid,C(CC(=O)O)[C@H](C(=O)O)N,3,5,147.13,C5H9NO4,101.0,4,-3.7
-88735,1-O-alpha-D-Glucopyranosyl-D-mannitol,C([C@@H]1[C@H]([C@@H]([C@H]([C@H](O1)OC[C@H]([C@H]([C@@H]([C@@H](CO)O)O)O)O)O)O)O)O,9,11,344.31,C12H24O11,201.0,8,-5.2
+Compound_CID,Name,smiles,H-Bond_Donor_Count,H-Bond_Acceptor_Count,Heavy_Atom_Count,Molecular_Weight,Molecular_Formula,Polar_Area,Rotatable_Bond_Count,XLogP
+305,Choline,C[N+](C)(C)CCO,1,1,,104.17,C5H14NO+,20.2,2,-0.4
+2335,Benzethonium,CC(C)(C)CC(C)(C)C1=CC=C(C=C1)OCCOCC[N+](C)(C)CC2=CC=CC=C2,0,2,30.0,412.6,C27H42NO2+,18.5,12,6.7
+3293,Ethoxyquin,CCOC1=CC2=C(C=C1)NC(C=C2C)(C)C,1,2,,217.31,C14H19NO,21.3,2,3.1
+3385,5-Fluorouracil,C1=C(C(=O)NC(=O)N1)F,2,3,,130.08,C4H3FN2O2,58.2,0,-0.9
+3485,Glutaraldehyde,C(CC=O)CC=O,0,2,,100.12,C5H8O2,34.1,4,-0.5
+3639,Hydrochlorothiazide,C1NC2=CC(=C(C=C2S(=O)(=O)N1)S(=O)(=O)N)Cl,3,7,,297.7,C7H8ClN3O4S2,135.0,1,-0.1
+5391,Temazepam,CN1C2=C(C=C(C=C2)Cl)C(=NC(C1=O)O)C3=CC=CC=C3,1,3,,300.74,C16H13ClN2O2,52.9,1,2.2
+6581,Acrylic Acid,C=CC(=O)O,1,2,,72.06,C3H4O2,37.3,1,0.3
+6781,Diethyl Phthalate,CCOC(=O)C1=CC=CC=C1C(=O)OCC,0,4,16.0,222.24,C12H14O4,52.6,6,2.5
+7541,Anilazine,C1=CC=C(C(=C1)NC2=NC(=NC(=N2)Cl)Cl)Cl,1,4,,275.5,C9H5Cl3N4,50.7,2,3.0
+7549,Dinitrosopentamethylenetetramine,C1N2CN(CN1CN(C2)N=O)N=O,0,8,,186.17,C5H10N6O2,71.8,0,0.3
+7850,Allyl chloride,C=CCCl,0,0,4.0,76.52,C3H5Cl,0.0,1,1.5
+15433,Dodecyldimethylamine oxide,CCCCCCCCCCCC[N+](C)(C)[O-],0,1,,229.4,C14H31NO,18.1,11,5.3
+16043,Tert-Butylhydroquinone,CC(C)(C)C1=C(C=CC(=C1)O)O,2,2,12.0,166.22,C10H14O2,40.5,1,2.8
+23327,D-Glutamic Acid,C(CC(=O)O)[C@H](C(=O)O)N,3,5,10.0,147.13,C5H9NO4,101.0,4,-3.7
+23393,Picolyl chloride,C1=CC=NC(=C1)CCl,0,1,,127.57,C6H6ClN,12.9,1,1.3
+24802,2-(Carboxymethyl)-2-hydroxybutanedioate,C(C(=O)O)C(CC(=O)[O-])(C(=O)[O-])O,2,7,,190.11,C6H6O7-2,138.0,3,-0.4
+34210,4-Acetylaminofluorene,CC(=O)NC1=CC=CC2=C1C3=CC=CC=C3C2,1,1,,223.27,C15H13NO,29.1,1,2.7
+44073,Acifluorfen,C1=CC(=C(C=C1C(F)(F)F)Cl)OC2=CC(=C(C=C2)[N+](=O)[O-])C(=O)O,1,8,24.0,361.65,C14H7ClF3NO5,92.4,3,3.0
+62477,"3,3-Diethoxy-1-propene",CCOC(C=C)OCC,0,2,,130.18,C7H14O2,18.5,5,1.4
+71697,Clobuzarit,CC(C)(C(=O)O)OCC1=CC=C(C=C1)C2=CC=C(C=C2)Cl,1,3,,304.8,C17H17ClO3,46.5,5,4.0
+88735,1-O-alpha-D-Glucopyranosyl-D-mannitol,C([C@@H]1[C@H]([C@@H]([C@H]([C@H](O1)OC[C@H]([C@H]([C@@H]([C@@H](CO)O)O)O)O)O)O)O)O,9,11,23.0,344.31,C12H24O11,201.0,8,-5.2
+119435,Dichlorprop-P,C[C@H](C(=O)O)OC1=C(C=C(C=C1)Cl)Cl,1,3,14.0,235.06,C9H8Cl2O3,46.5,3,3.4
+498033,2-Ethylhexyl sulfate(1-),CCCCC(CC)COS(=O)(=O)[O-],0,4,13.0,209.29,C8H17O4S-,74.8,6,2.6
+4713005,"3,5-Dimethylbenzenesulfonate",CC1=CC(=CC(=C1)S(=O)(=O)[O-])C,0,3,12.0,185.22,C8H9O3S-,65.6,0,1.4
+5281855,Ellagic Acid,C1=C2C3=C(C(=C1O)O)OC(=O)C4=CC(=C(C(=C43)OC2=O)O)O,4,8,,302.19,C14H6O8,134.0,0,1.1
+6537503,"1,1'-Oxydi(propan-1-ol)",CCC(O)OC(CC)O,2,3,,134.17,C6H14O3,49.7,4,0.8
+54696270,"2-(1,2-Dihydroxyethyl)-4-hydroxy-5-oxo-2,5-dihydrofuran-3-olate (non-preferred name)",C(C(C1C(=C(C(=O)O1)[O-])O)O)O,3,6,,175.12,C6H7O6-,110.0,2,-1.0
+54733076,"(2R)-2-[(2R)-3,4-dihydroxy-5-oxo-2H-furan-2-yl]-2-hydroxyethanolate",C([C@H]([C@@H]1C(=C(C(=O)O1)O)O)O)[O-],3,6,,175.12,C6H7O6-,110.0,2,-0.5
+59092928,4-Dodecan-2-ylbenzenesulfonate,CCCCCCCCCCC(C)C1=CC=C(C=C1)S(=O)(=O)[O-],0,3,,325.5,C18H29O3S-,65.6,10,6.6

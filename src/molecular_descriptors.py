@@ -2,6 +2,12 @@ import pandas as pd
 from rdkit.Chem import Descriptors, MolToSmiles
 import seaborn as sns 
 import matplotlib.pyplot as plt
+from mordred import Calculator
+from mordred.Weight import Weight
+from mordred.SLogP import SLogP
+from mordred.TopoPSA import TopoPSA
+from mordred.HydrogenBond import HBondDonor, HBondAcceptor
+from mordred.RotatableBond import RotatableBondsCount
 
 def calculate_rdkit_descriptors(mols):
     molecular_descriptors = []
@@ -14,7 +20,7 @@ def calculate_rdkit_descriptors(mols):
             'Polar_Area': Descriptors.TPSA(mol),
             'XLogP': Descriptors.MolLogP(mol),
         })
-    
+
     df_molecular_descriptors = pd.DataFrame(molecular_descriptors)
     print("Descriptors summary:")
     print(df_molecular_descriptors.describe())
@@ -54,3 +60,24 @@ def lipinski_rule(mol):
     print(f'The following compound: "{MolToSmiles(mol)}" passes Lipinski\'s rule')
     return True
 
+def calculate_mordred_descriptors(mols):
+    calculator = Calculator([
+        Weight,
+        HBondDonor,
+        HBondAcceptor,
+        RotatableBondsCount,
+        TopoPSA,
+        SLogP
+    ], ignore_3D=True)
+    mordred_descriptors = []
+    for mol in mols:
+        result = calculator(mol)
+        mordred_descriptors.append(result.asdict())
+        
+    df_mordred_descriptors = pd.DataFrame(mordred_descriptors)
+    print("Mordred column names:", df_mordred_descriptors.columns.tolist())
+    print("Mordred descriptors summary:")
+    print(df_mordred_descriptors.describe())
+    print("First molecule descriptors:")
+    print(df_mordred_descriptors.iloc[0])
+    return df_mordred_descriptors
