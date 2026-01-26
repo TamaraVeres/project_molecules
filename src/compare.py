@@ -1,18 +1,12 @@
 import pandas as pd
+import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
+from sklearn.metrics import r2_score
 
 def compare_descriptors(df_molecular_descriptors, df_mordred_descriptors, df_compounds):
     comparison_df = pd.DataFrame()
     comparison_df["smiles"] = df_compounds["smiles"]
-    comparison_df["molecular_weight_experimental"] = df_compounds["Molecular_Weight"]
-    comparison_df["molecular_weight_rdkit"] = df_molecular_descriptors["Molecular_Weight"]
-    comparison_df["molecular_weight_mordred"] = df_mordred_descriptors["MW"]
-    comparison_df["molecular_weight_error"] = comparison_df["molecular_weight_experimental"] - comparison_df["molecular_weight_rdkit"]
-    comparison_df["tpsa_experimental"] = df_compounds["Polar_Area"]
-    comparison_df["tpsa_rdkit"] = df_molecular_descriptors["Polar_Area"]
-    comparison_df["tpsa_mordred"] = df_mordred_descriptors["TopoPSA"]
-    comparison_df["tpsa_error"] = comparison_df["tpsa_experimental"] - comparison_df["tpsa_rdkit"]
     comparison_df["logp_experimental"] = df_compounds["XLogP"]
     comparison_df["logp_rdkit"] = df_molecular_descriptors["XLogP"]
     comparison_df["logp_mordred"] = df_mordred_descriptors["SLogP"]
@@ -22,6 +16,10 @@ def compare_descriptors(df_molecular_descriptors, df_mordred_descriptors, df_com
     
 def scatter_plot(df_compounds, df_molecular_descriptors):
     plt.scatter(df_compounds["XLogP"], df_molecular_descriptors["XLogP"])
+    m, b = np.polyfit(df_compounds["XLogP"], df_molecular_descriptors["XLogP"], 1)
+    plt.plot(df_compounds["XLogP"], m*df_compounds["XLogP"] + b, color='red')
+    r2 = r2_score(df_compounds["XLogP"], df_molecular_descriptors["XLogP"])
+    plt.text(1, -4, f"R² = {r2:.3f}", fontsize=12)
     plt.xlabel("Experimental XLogP")
     plt.ylabel("RDKit XLogP")
     plt.title("Experimental vs RDKit XLogP")

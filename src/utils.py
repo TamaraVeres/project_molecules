@@ -1,7 +1,6 @@
 import pandas as pd
 from rdkit import Chem 
 from rdkit.Chem.MolStandardize import rdMolStandardize
-from rdkit.Chem import Draw 
 
 
 def load_csv(file_path):
@@ -31,7 +30,7 @@ def clean_molecules(df_compounds):
     return mols
     
 
-def draw_molecule(mol):
-    Draw.MolToFile(mol, "molecule.png")
-    return mol
-
+def prepare_data(X_features, df_compounds):
+    X = X_features
+    y = df_compounds["XLogP"].values
+    return X, y
