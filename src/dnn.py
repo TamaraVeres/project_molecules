@@ -1,6 +1,6 @@
 
 import numpy as np
-from sklearn.metrics import r2_score, mean_absolute_error
+from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -67,7 +67,8 @@ def evaluate_model(model_sequential, X_train_tensor, X_test_tensor, y_train_tens
         print("\nNeural network model evaluation:")
         print("Train MAE:", mean_absolute_error(y_train_tensor.numpy(), train_predictions.numpy()))
         print("Test MAE:", mean_absolute_error(y_test_tensor.numpy(), test_predictions.numpy()))
-        print("MSE:", test_loss.item())
+        print("Train MSE:", mean_squared_error(y_train_tensor.numpy(), train_predictions.numpy()))
+        print("Test MSE:", test_loss.item())
         print("RMSE:", np.sqrt(test_loss.item()))
         print("R²:", r2_score(y_test_tensor.numpy(), test_predictions.numpy()))
 

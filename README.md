@@ -61,20 +61,20 @@ Finally, the molecular descriptors calculated with RDKit are compared with the r
 
 ## Predictive Modeling: Linear Regression and DNN
 
-To investigate whether predictive performance could be improved, a linear regression model and a deep neural network were trained using the available data. The linear regression model achieved an R² of 0.80, while the DNN further improved the performance to an R² of 0.84.
+To investigate whether predictive performance could be improved, a linear regression model and a deep neural network were trained using the available data. The linear regression model achieved an R² of 0.80, while the DNN further improved the performance to an R² of 0.85.
 
 ### Model Performance Results
 
 | Metric | Linear Regression | Deep Neural Network |
 |--------|------------------|---------------------|
-| **Train MAE** | 0.345 | 0.117 |
-| **Test MAE** | 0.435 | 0.348 |
-| **Train MSE** | 0.215 | - |
-| **Test MSE** | 0.340 | 0.261 |
-| **RMSE** | 0.583 | 0.511 |
-| **R²** | **0.802** | **0.848** |
+| **Train MAE** | 0.345 | 0.073 |
+| **Test MAE** | 0.435 | 0.330 |
+| **Train MSE** | 0.215 | 0.019 |
+| **Test MSE** | 0.340 | 0.250 |
+| **RMSE** | 0.583 | 0.500 |
+| **R²** | **0.802** | **0.854** |
 
-The DNN model outperformed Linear Regression across all metrics, achieving the highest R² score of 0.848 and the lowest test error (RMSE: 0.511). Both models significantly improved upon the baseline RDKit calculation (R² = 0.553).
+The DNN model outperformed Linear Regression across all metrics, achieving the highest R² score of 0.854 and the lowest test error (RMSE: 0.500). Both models significantly improved upon the baseline RDKit calculation (R² = 0.553).
 
 ---
 
